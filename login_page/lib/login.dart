@@ -56,6 +56,9 @@ class _MyLoginState extends State<MyLogin> {
                           border: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(10))),
                     ),
+                    SizedBox(
+                      height: 40,
+                    ),
                     Row(
                       children: [
                         Text(
@@ -63,7 +66,7 @@ class _MyLoginState extends State<MyLogin> {
                           style: TextStyle(
                               color: Color.fromARGB(255, 21, 160, 229),
                               fontSize: 27,
-                              fontWeight: FontWeight.w800),
+                              fontWeight: FontWeight.w700),
                         )
                       ],
                     )
