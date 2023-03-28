@@ -67,7 +67,7 @@ class _MyLoginState extends State<MyLogin> {
                               color: Color.fromARGB(255, 21, 160, 229),
                               fontSize: 27,
                               fontWeight: FontWeight.w700),
-                        )
+                        ),
                       ],
                     )
                   ],
