@@ -1,15 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
 
-class MyLogin extends StatefulWidget {
-  const MyLogin({super.key});
+class Registration extends StatefulWidget {
+  Registration({Key? key}) : super(key: key);
 
   @override
-  State<MyLogin> createState() => _MyLoginState();
+  State<Registration> createState() => _RegistrationState();
 }
 
-class _MyLoginState extends State<MyLogin> {
+class _RegistrationState extends State<Registration> {
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -67,10 +65,6 @@ class _MyLoginState extends State<MyLogin> {
                               color: Color.fromARGB(255, 21, 160, 229),
                               fontSize: 27,
                               fontWeight: FontWeight.w700),
-                        ),
-                        CircleAvatar(
-                          radius: 30,
-                          backgroundColor: Color.fromARGB(255, 116, 167, 240),
                         )
                       ],
                     )
