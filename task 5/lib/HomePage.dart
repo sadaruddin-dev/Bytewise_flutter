@@ -14,17 +14,26 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Stack(
-        children: [
-          Container(
-            decoration: BoxDecoration(
-                image: DecorationImage(
-                    image: AssetImage('assets/login2.jpg'), fit: BoxFit.cover)),
-          )
-        ],
+      appBar: AppBar(),
+      body: Container(
+        child: Column(
+          children: [
+            Center(
+              child: Container(
+                decoration: BoxDecoration(
+                  image: NetworkImage(url)
+                ),
+                width: 300,
+                height: 200,
+                color: Colors.deepPurpleAccent,
+                padding: EdgeInsets.only(top: 700, right: 200),
+              ),
+            )
+          ],
+        ),
       ),
       // ignore: prefer_const_literals_to_create_immutables
-      backgroundColor: Colors.deepPurple,
+      // backgroundColor: Colors.deepPurple,
       bottomNavigationBar: CurvedNavigationBar(
           backgroundColor: Colors.deepPurple,
           color: Colors.blueGrey,
