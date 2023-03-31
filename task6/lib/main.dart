@@ -80,14 +80,16 @@ class HomeWidget extends StatelessWidget {
         Expanded(
           flex: 1,
           child: Container(
+            decoration: BoxDecoration(
+                image: DecorationImage(image: AssetImage('assets/logo.png'))),
             padding: EdgeInsets.only(
               right: 35,
               left: 35,
             ),
-            color: Colors.lightBlue,
+            // color: Colors.lightBlue,
             child: Center(
-              child: Icon(Icons.info),
-            ),
+                // child: Icon(Icons.info),
+                ),
           ),
         ),
         // SizedBox(height: 12),
@@ -172,40 +174,52 @@ class HomeWidget extends StatelessWidget {
 class LoginWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('Login'),
-      ),
-      body: Padding(
-        padding: const EdgeInsets.all(16.0),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            TextField(
-              decoration: InputDecoration(
-                border: OutlineInputBorder(),
-                labelText: 'Email',
-              ),
+    return Container(
+      decoration: BoxDecoration(
+          image: DecorationImage(
+              image: AssetImage('assets/background.jpg'), fit: BoxFit.cover)),
+      child: Scaffold(
+        backgroundColor: Colors.transparent,
+        appBar: AppBar(
+          title: Text('Login'),
+        ),
+        body: Padding(
+          padding: const EdgeInsets.all(16.0),
+          child: Container(
+            decoration: BoxDecoration(
+                image: DecorationImage(
+                    image: AssetImage('assets/background.jpg'),
+                    fit: BoxFit.cover)),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                TextField(
+                  decoration: InputDecoration(
+                    border: OutlineInputBorder(),
+                    labelText: 'Email',
+                  ),
+                ),
+                SizedBox(height: 16),
+                TextField(
+                  obscureText: true,
+                  decoration: InputDecoration(
+                    border: OutlineInputBorder(),
+                    labelText: 'Password',
+                  ),
+                ),
+                SizedBox(height: 32),
+                ElevatedButton(
+                  onPressed: () {},
+                  child: Text('Login'),
+                ),
+                SizedBox(height: 16),
+                TextButton(
+                  onPressed: () {},
+                  child: Text('Forgot password?'),
+                ),
+              ],
             ),
-            SizedBox(height: 16),
-            TextField(
-              obscureText: true,
-              decoration: InputDecoration(
-                border: OutlineInputBorder(),
-                labelText: 'Password',
-              ),
-            ),
-            SizedBox(height: 32),
-            ElevatedButton(
-              onPressed: () {},
-              child: Text('Login'),
-            ),
-            SizedBox(height: 16),
-            TextButton(
-              onPressed: () {},
-              child: Text('Forgot password?'),
-            ),
-          ],
+          ),
         ),
       ),
     );
