@@ -75,9 +75,75 @@ class HomeWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
-      mainAxisAlignment: MainAxisAlignment.end,
+      // mainAxisAlignment: MainAxisAlignment.end,
       children: <Widget>[
-        // SizedBox(height: 32),
+        Expanded(
+          flex: 1,
+          child: Container(
+            padding: EdgeInsets.only(
+              right: 35,
+              left: 35,
+            ),
+            color: Colors.lightBlue,
+            child: Center(
+              child: Icon(Icons.info),
+            ),
+          ),
+        ),
+        // SizedBox(height: 12),
+        Expanded(
+          flex: 1,
+          child: Container(
+            padding: EdgeInsets.only(
+              right: 35,
+              left: 35,
+            ),
+            color: Color.fromARGB(255, 140, 200, 240),
+            child: Center(
+              child: Icon(Icons.new_releases),
+            ),
+          ),
+        ),
+        Expanded(
+          flex: 1,
+          child: Container(
+            padding: EdgeInsets.only(
+              right: 35,
+              left: 35,
+            ),
+            color: Colors.blue,
+            child: Center(
+              child: Icon(Icons.people),
+            ),
+          ),
+        ),
+        Expanded(
+          flex: 1,
+          child: Container(
+            padding: EdgeInsets.only(
+              right: 35,
+              left: 35,
+            ),
+            color: Colors.lightGreen,
+            child: Center(
+              child: Icon(Icons.access_alarm),
+            ),
+          ),
+        ),
+        Expanded(
+          flex: 1,
+          child: Container(
+            padding: EdgeInsets.only(
+              right: 35,
+              left: 35,
+            ),
+            color: Colors.orange,
+            child: Center(
+              child: Icon(Icons.settings),
+            ),
+          ),
+        ),
+        SizedBox(height: 12),
         ElevatedButton(
           onPressed: () {
             Navigator.push(
